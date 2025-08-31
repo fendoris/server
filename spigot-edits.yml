@@ -1,0 +1,9 @@
+restart-script: ./ensure.sh
+unknown-command: §cUnknown or incomplete command.
+entity-tracking-range:
+      animals: 96
+      display: 128
+      misc: 96
+      monsters: 96
+      other: 64
+      players: 128

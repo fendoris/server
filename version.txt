@@ -1,0 +1,4 @@
+Update when jar is changed!
+
+Current Server Jar:
+paper-1.21.8-56

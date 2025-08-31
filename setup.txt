@@ -1,0 +1,8 @@
+1. Download PaperMC jar
+2. Rename to server.jar and place in /
+3. Run start.bat (local for Windows) or ensure.sh for Linux host
+4. Accept eula and restart
+5. Setup server.properties-edits.yml and spigot-edits.yml to their respective files
+6. Restart
+7. Setup fendoris-discordhook/config.yml\url exists
+8. Reload internally or restart (preferred)

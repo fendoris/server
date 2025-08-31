@@ -1,0 +1,27 @@
+webhook:
+  enabled: true
+  url: "PUT_WEBHOOK_URL_HERE"
+  timeout-ms: 5000
+  override-username: true
+  username-prefix: ""
+  avatar-url-template: "https://minotar.net/avatar/<uuid>/128"
+  avatar-fallback-url: "https://minotar.net/avatar/Steve/128"
+  check-avatar: true
+  # Tokens: <player>, <message>
+  content-template: "<message>"
+  debug: false
+
+server-events:
+  enabled: true
+  join:
+    enabled: true
+    content-template: "<player> connected"
+  quit:
+    enabled: true
+    content-template: "<player> disconnected"
+
+messages:
+  reload-success: "<green>fendoris-discordhook reloaded.</green>"
+  reload-fail: "Error in language string."
+  no-permission: "<red>You do not have permission.</red>"
+  webhook-missing: "<red>Webhook is missing or disabled. Check config.yml.</red>"

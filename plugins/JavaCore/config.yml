@@ -1,0 +1,386 @@
+# =========================================================
+#  Fendoris JavaCore Configuration
+#  Repo: https://github.com/kchaney1508
+#  MiniMessage playground: https://webui.advntr.dev/
+# =========================================================
+
+# ---------------------------------------------------------
+# Reload / Administration
+# ---------------------------------------------------------
+
+reload:
+  no-permission: <red>You don't have permission to reload the plugin.</red>
+  reload-success: '<newline><gold>Operator: Fendoris plugin config reloaded successfully.<reset><newline>'
+  reload-broadcast: '<gray><gold>Operator</gold>: %player% Reloaded Fendoris JavaCore</gray>'
+
+# Broadcast command use to Operators
+operator-command-logs-enabled: true
+operator-pvp-toggle-on: '<gray><gold>Operator</gold>: %player%: toggled their PvP
+  on.</gray>'
+operator-pvp-toggle-off: '<gray><gold>Operator</gold>: %player%: toggled their PvP
+  off.</gray>'
+operator-reload-broadcast-message: '<gray><gold>Operator</gold>: Fendoris JavaCore
+  Reloaded</gray>'
+
+# ---------------------------------------------------------
+# Server List (MOTD)
+# ---------------------------------------------------------
+
+server-list-motd: <reset>                 <gold><bold>Fendoris</bold></gold><reset>
+  [1.21.8]<newline><reset>               <gray>Server Now Released</gray><reset>
+server-list-ping-logs: true # Logs server list ping requests to console
+
+# ---------------------------------------------------------
+# Welcome / Join / Quit
+# ---------------------------------------------------------
+
+private-join-message-enabled: true
+public-join-message-enabled: true
+public-quit-message-enabled: true
+
+private-join-message: <newline><color:#38aa56>You successfully connect, %player%.
+  Have questions or concerns? Use <click:suggest_command:'/ineedhelp'><hover:show_text:'(Click)
+  /ineedhelp'>/ineedhelp</hover></click> or reach out on our <click:open_url:'https://fendoris.com/discord'><b><hover:show_text:'(Click)
+  fendoris.com/discord'>Discord</hover></b></click>.<newline>
+
+public-join-message: <gray>%player% connected</gray><reset>
+public-quit-message: <gray>%player% disconnected</gray><reset>
+
+public-operator-join-message: |-
+  <reset><gold><hover:show_text:"<gold>This player is an Operator</gold>
+
+  <gray>These are trusted members of our community who handle server management, maintenance and moderation.</gray>">%player%</hover></gold> <gray>connected</gray><reset>
+public-operator-quit-message: |-
+  <reset><gold><hover:show_text:"<gold>This player is an Operator</gold>
+
+  <gray>These are trusted members of our community who handle server management, maintenance and moderation.</gray>">%player%</hover></gold> <gray>disconnected</gray><reset>
+system:
+  
+  # ---------------------------------------------------------
+  # PvP System
+  # ---------------------------------------------------------
+
+  pvp:
+    enabled: true
+    
+    cooldown-enabled: true
+    cooldown-seconds: 30
+    
+    combat-cooldown-enabled: true
+    combat-cooldown-seconds: 10
+    
+    message-cooldown-seconds: 5
+    attacker-disabled-message: <red>You cannot PvP while your PvP is disabled.<reset>
+    victim-disabled-message: <red>This player has PvP disabled.<reset>
+    
+    only-player-message: <red>Only players can use this command.<reset>
+    usage-message: '<red>Usage: /pvp (Toggle PvP on or off for yourself)<reset>'
+    toggle-disabled-message: <red>The PvP toggle system is currently disabled on this
+      server.<reset>
+    combat-cooldown-message-less-than-1: <red>You must wait less than 1s after combat
+      to toggle PvP.<reset>
+    combat-cooldown-message: <red>You must wait %seconds%s after combat to toggle
+      PvP.<reset>
+    toggle-cooldown-message-less-than-1: <red>You must wait less than 1s to toggle
+      PvP again.<reset>
+    toggle-cooldown-message: <red>You must wait %seconds%s to toggle PvP again.<reset>
+    disabled-message: <red>You have disabled PvP.<reset>
+    enabled-message: <red>You have enabled PvP.<reset>
+    operator-pvp-toggle-off: '<gray>[<red>Player</red>: <white>%player%</white> toggled
+      their PvP <red>off</red>]</gray>'
+    operator-pvp-toggle-on: '<gray>[<red>Player</red>: <white>%player%</white> toggled
+      their PvP <green>on</green>]</gray>'
+
+# ---------------------------------------------------------
+# Death Messages
+# ---------------------------------------------------------
+
+death-message-enabled: true
+death-message-prefix: '<i>Death:'
+
+# ---------------------------------------------------------
+# Tablist
+# ---------------------------------------------------------
+
+tablist-enabled: true # Restart suggested
+tablist-update-interval-seconds: 3 # Suggested for Performance
+tablist-padding-spaces: 2 # Num of padding spaces left and right of each header/footer line
+
+tablist-header: <newline><gold><b>Fendoris</b></gold><reset><newline>
+tablist-footer: <newline><gray>%online%</gray><reset><newline><gray>%ping%ms Latency</gray>
+  <dark_gray>/</dark_gray> <gray>%tps% TPS</gray><reset><newline>
+
+tab-operator-color: gold # black, dark_blue, dark_green, dark_aqua, dark_red, dark_purple, gold, gray, dark_gray, blue, green, aqua, red, light_purple, yellow, white
+
+online-count-substitutions:
+  '1': One Online Player
+  '2': Two Online Players
+  '3': Three Online Players
+  '4': Four Online Players
+  '5': Five Online Players
+  '6': Six Online Players
+  '7': Seven Online Players
+  '8': Eight Online Players
+  '9': Nine Online Players
+
+tablist-testing-online-count: -1 # -1 or 0 to disable testing override, otherwise use a positive number
+
+# ---------------------------------------------------------
+# Session Codes
+# ---------------------------------------------------------
+
+session:
+  enabled: true
+  code-length: 6 # 4-32 & Restart suggested
+  
+  only-player-message: <red>Only players can use this command.<reset>
+  usage-message: '<red>Usage: /session (Shows your current Session Code)<reset>'
+  disabled-message: <red>The Session Code system is currently disabled.<reset>
+  code-message: <reset><newline><reset><red>Your session code is <click:suggest_command:'%session_code%'><red><bold>%session_code%</bold><red></click>,
+    reconnecting will generate another one. If you are reporting a server bug or client-sided
+    issue, an Operator may ask for for this.<reset><reset><newline><reset>
+
+# ---------------------------------------------------------
+# Command Whitelist
+# ---------------------------------------------------------
+
+command-whitelist-enabled: true
+disallowed-command-message: <red>Unknown or incomplete command.<reset>
+
+allowed-commands:
+- pvp
+- session
+- spawn
+- fendorisreload
+- message
+- msg
+- reply
+- r
+- togglechat
+- togglepm
+- ineedhelp
+- plugins
+- version
+- verify
+- apply
+
+# ---------------------------------------------------------
+# Spawn / SetSpawn / SendToSpawn
+# ---------------------------------------------------------
+
+spawn:
+  enabled: true
+  
+  location-world: world
+  location-x: 0.5
+  location-y: 100.0
+  location-z: 0.5
+  location-yaw: 0.0
+  location-pitch: 0.0
+  
+  cooldown: 300
+  cooldown-message: <red>You must wait %seconds%s before using this again.<reset>
+  cooldown-message-less-than-1: <red>You must wait less than 1s to use /spawn again.<reset>
+  
+  teleport-delay-seconds: 5
+  teleport-delay-start-message: <yellow>Teleporting to spawn in %seconds%s... Don't
+    move!<reset>
+  teleport-cancelled-message: <red>Teleport cancelled because you moved.<reset>
+  
+  teleport-particles-enabled: true
+  teleport-particle-name: minecraft:portal
+  teleport-particle-count: 20
+  
+  teleport-sound-enabled: true
+  teleport-sound-name: minecraft:block.note_block.pling
+  teleport-sound-volume: 1.0
+  teleport-sound-pitch: 1.0
+  
+  only-player-message: <red>Only players can use this command.<reset>
+  usage-message: '<red>Usage: /spawn (Teleports you to the server spawn location)<reset>'
+  disabled-message: <red>The Spawn system is currently disabled on this server.<reset>
+  teleport-success-message: <green>You have been teleported to the server spawn.<reset>
+  teleport-already-in-progress-message: <red>You are already teleporting to spawn!<reset>
+  
+  no-permission-message: <red>You don't have permission to use this command.<reset>
+  sendtospawn-usage: '<red>Usage: /sendtospawn <player><reset>'
+  player-not-online: <red>That player is not online.<reset>
+  sent-to-spawn-message: <green>You have been sent to spawn by an operator.<reset>
+  operator-sent-message: <green>Sent %player% to spawn.<reset>
+  
+  set-success: <green>Spawn location saved to config.<reset>
+
+# ---------------------------------------------------------
+# Holograms
+# ---------------------------------------------------------
+
+hologram:
+  messages:
+    no-permission: <red>You don't have permission to use this command.<reset>
+    only-player: <red>Only players can use this command.<reset>
+    
+    help:
+      main: <gray>/hologram create | delete <id> | list | bring <id> | set <id> ...
+        | cleanup</gray>
+      set:
+        header: <gray>Usage:</gray>
+        text: <gray>/hologram set <id> text <message...></gray>
+        scale: <gray>/hologram set <id> scale <number></gray>
+        background: <gray>/hologram set <id> background <#AARRGGBB|#RRGGBB></gray>
+        text_opacity: <gray>/hologram set <id> text_opacity <0-255></gray>
+        alignment: <gray>/hologram set <id> alignment <left|center|right></gray>
+        billboard: <gray>/hologram set <id> billboard <center|fixed|vertical|horizontal></gray>
+        shadow: <gray>/hologram set <id> shadow <true|false></gray>
+        see_through: <gray>/hologram set <id> see_through <true|false></gray>
+        translation: <gray>/hologram set <id> translation <x> <y> <z></gray>
+        rotation: <gray>/hologram set <id> rotation <yaw> <pitch> <roll></gray>
+    
+    usage:
+      delete: '<red>Usage: /hologram delete <id></red>'
+      bring: '<red>Usage: /hologram bring <id></red>'
+      scale: '<red>Usage: /hologram set <id> scale <number></red>'
+      text_opacity: '<red>Usage: /hologram set <id> text_opacity <0-255></red>'
+      translation: '<red>Usage: /hologram set <id> translation <x> <y> <z></red>'
+      rotation: '<red>Usage: /hologram set <id> rotation <yaw> <pitch> <roll></red>'
+      shadow: '<red>Usage: /hologram set <id> shadow <true|false></red>'
+      see_through: '<red>Usage: /hologram set <id> see_through <true|false></red>'
+    
+    created: <green>Created hologram <white>#%id%</white> at your location.</green>
+    list-header: <gold>Holograms:</gold>
+    list-empty: <gray>No holograms configured.</gray>
+    id-not-number: <red>ID must be a number.</red>
+    not-found: <red>Hologram <white>#%id%</white> not found.</red>
+    unknown-property: <red>Unknown property.</red>
+    
+    brought: <green>Brought hologram <white>#%id%</white> to your location.</green>
+    deleted: <green>Deleted hologram <white>#%id%</white>.</green>
+    
+    set:
+      text:
+        ok: <green>Updated text for <white>#%id%</white>.</green>
+      scale:
+        ok: <green>Scale set to <white>%value%</white> for <white>#%id%</white>.</green>
+        fail: <red>Failed to set scale for <white>#%id%</white>.</red>
+      background:
+        ok: <green>Background set to <white>%value%</white> for <white>#%id%</white>.</green>
+        invalid: '<red>Invalid color. Use #RRGGBB or #AARRGGBB.</red>'
+      text_opacity:
+        ok: <green>Text opacity set to <white>%value%</white> for <white>#%id%</white>.</green>
+        fail: <red>Failed to set text opacity for <white>#%id%</white>.</red>
+      alignment:
+        ok: <green>Alignment set to <white>%value%</white> for <white>#%id%</white>.</green>
+        invalid: <red>Alignment must be left, center, or right.</red>
+      billboard:
+        ok: <green>Billboard set to <white>%value%</white> for <white>#%id%</white>.</green>
+        invalid: <red>Billboard must be center, fixed, vertical, or horizontal.</red>
+      shadow:
+        ok: <green>Shadow set to <white>%value%</white> for <white>#%id%</white>.</green>
+        fail: <red>Failed to set shadow for <white>#%id%</white>.</red>
+      see_through:
+        ok: <green>See-through set to <white>%value%</white> for <white>#%id%</white>.</green>
+        fail: <red>Failed to set see-through for <white>#%id%</white>.</red>
+      translation:
+        ok: <green>Translation set for <white>#%id%</white>.</green>
+        fail: <red>Failed to set translation for <white>#%id%</white>.</red>
+      rotation:
+        ok: <green>Rotation set for <white>#%id%</white>.</green>
+        fail: <red>Failed to set rotation for <white>#%id%</white>.</red>
+    
+    cleanup:
+      removed: <green>Removed <yellow>%count%</yellow> hologram display(s).</green>
+
+# ---------------------------------------------------------
+# Chat
+# ---------------------------------------------------------
+
+chat:
+  format:
+    global: '<white>%player%</white>: %message%'
+    operator: '<gold>%player%</gold>: %message%'
+    player-hover: <gray>(Click) Message %player%</gray>
+    click-template: '/msg %playername% '
+  
+  msg:
+    self: <gray>[To <white>%target%</white>]</gray> %message%
+    self-operator: <gray>[To <gold>%target%</gold>]</gray> %message%
+    other: <gray>[From <white>%player%</white>]</gray> %message%
+    other-operator: <gray>[From <gold>%player%</gold>]</gray> %message%
+  
+  message:
+    usage: '<red>Usage: /message <player> <message></red>'
+  
+  reply:
+    none: <red>No recent private conversation.</red>
+    self: <red>You cannot message yourself.</red>
+    usage: '<red>Usage: /reply <message></red>'
+  
+  pm:
+    not-found: <red>Player not found.</red>
+    blocked: <red>This player is not accepting private messages.</red>
+  
+  togglechat:
+    enabled-message: <green>Public chat disabled.</green>
+    disabled-message: <green>Public chat enabled.</green>
+    reminder: <red>You have chat disabled. Use /togglechat to enable.</red>
+    cooldown-message: <red>You must wait %seconds%s before toggling chat again.</red>
+    cooldown-seconds: 3
+  
+  togglepm:
+    enabled-message: <green>Private messages disabled.</green>
+    disabled-message: <green>Private messages enabled.</green>
+    cooldown-message: <red> You must wait %seconds%s before toggling private messages
+      again.</red>
+    cooldown-seconds: 3
+  
+  cooldown:
+    enabled: true
+    seconds: 3.0
+    message: <red>You must wait %seconds%s before chatting again.</red>
+  
+  mention-sound-enabled: true
+  mention-sound-name: minecraft:block.note_block.pling
+  mention-sound-volume: 1.0
+  mention-sound-pitch: 1.0
+  
+  urls:
+    replacement: '***'
+    allowlist:
+    - fendoris.com
+    - discord.com/invite/fendoris
+  
+  profanity:
+    enabled: true
+    words:
+    - nigger
+
+# ---------------------------------------------------------
+# Help Request
+# ---------------------------------------------------------
+
+helpme:
+  enabled: true
+  cooldown-seconds: 60
+  cooldown-no-ops-online-seconds: 10
+  cooldown-message: <red>You must wait %seconds%s before using this again.</red>
+  only-player-message: <red>Only players can use this command.</red>
+  disabled-message: <red>This feature is currently disabled.</red>
+  default-message: needs help.
+  broadcast: <gold>Help Request:</gold> <white>%player%</white> %message%
+  ack-message: <green>Your request has been sent to online operators.</green>
+  no-operators: <red>No <gold>Operators</gold> are online right now. If you need more
+    help, reach out on our <click:open_url:'https://fendoris.com/discord'><hover:show_text:'(Click)
+    fendoris.com/discord'><b>Discord</b></hover></click>.</red>
+
+# ---------------------------------------------------------
+# Storage
+# ---------------------------------------------------------
+
+holograms: {}
+
+# ---------------------------------------------------------
+# Do Not Edit Below
+# ---------------------------------------------------------
+
+next-hologram: 0
+
+# ----------------------------- End of Config -------------
