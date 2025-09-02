@@ -19,6 +19,8 @@ server-events:
   quit:
     enabled: true
     content-template: "<player> disconnected"
+  death:
+    enabled: true
 
 messages:
   reload-success: "<green>fendoris-discordhook reloaded.</green>"
