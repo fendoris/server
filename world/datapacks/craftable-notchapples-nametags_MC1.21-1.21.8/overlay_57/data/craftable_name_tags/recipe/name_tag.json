@@ -1,0 +1,17 @@
+{
+	"result": {
+		"id": "minecraft:name_tag",
+		"count": 1
+	},
+	"type": "crafting_shaped",
+	"pattern": [
+		" IS",
+		" PI",
+		"P  "
+	],
+	"key": {
+		"I": "minecraft:iron_ingot",
+		"P": "minecraft:paper",
+		"S": "minecraft:string"
+	}
+}

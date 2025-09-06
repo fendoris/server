@@ -25,9 +25,12 @@ server.properties
 /BuildTools/
 /config/
 /crash-reports
-/world/
 /world_nether
 /world_the_end
+
+/world/*
+/world/datapacks/bukkit
+!/world/datapacks
 
 ###
 
