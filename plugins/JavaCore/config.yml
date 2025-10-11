@@ -27,7 +27,7 @@ operator-reload-broadcast-message: '<gray><gold>Operator</gold>: Fendoris JavaCo
 # ---------------------------------------------------------
 
 server-list-motd: <reset>                 <gold><bold>Fendoris</bold></gold><reset>
-  [1.21.8]<newline><reset>               <gray>Server Now Released</gray><reset>
+  [1.21.10]<newline><reset>               <gray>Fallback Server Added</gray><reset>
 server-list-ping-logs: true # Logs server list ping requests to console
 
 # ---------------------------------------------------------
