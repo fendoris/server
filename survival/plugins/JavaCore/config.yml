@@ -8,6 +8,27 @@
 # Reload / Administration
 # ---------------------------------------------------------
 
+home:
+  teleport-delay-seconds: 3
+  teleport-already-in-progress-message: <red>You are already teleporting home!<reset>
+  cooldown-seconds: 5
+  only-player-message: <red>Only players can use this command.<reset>
+  usage-message: '<red>Usage: /home<reset>'
+  cooldown-message: <red>You must wait %seconds%s before using this again.<reset>
+  cooldown-message-less-than-1: <red>You must wait less than 1s to use /home again.<reset>
+  
+  # Action bar messages
+  teleport-about-to: <gray>Preparing to Teleport Home</gray>
+  teleport-in-progress: <green>Teleported Home</green>
+  teleport-success: <green>Teleported Home</green>
+sethome:
+  cooldown-seconds: 60
+  only-player-message: <red>Only players can use this command.<reset>
+  usage-message: '<red>Usage: /sethome<reset>'
+  cooldown-message: <red>You must wait %seconds%s before using this again.<reset>
+  cooldown-message-less-than-1: <red>You must wait less than 1s to use /sethome again.<reset>
+  set-success: <green>Your home has been saved.<reset>
+
 reload:
   no-permission: <red>You don't have permission to reload the plugin.</red>
   reload-success: '<newline><gold>Operator: Fendoris plugin config reloaded successfully.<reset><newline>'
@@ -150,12 +171,13 @@ disallowed-command-message: <red>Unknown or incomplete command.<reset>
 allowed-commands:
 - pvp
 - session
-- spawn
 - fendorisreload
 - message
 - msg
 - reply
 - r
+- home
+- sethome
 - togglechat
 - togglepm
 - ineedhelp
@@ -172,9 +194,9 @@ spawn:
   enabled: true
   
   location-world: world
-  location-x: 0.5
-  location-y: 100.0
-  location-z: 0.5
+  location-x: -66.5
+  location-y: 68.9375
+  location-z: 140.5
   location-yaw: 0.0
   location-pitch: 0.0
   
