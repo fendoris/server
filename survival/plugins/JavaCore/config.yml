@@ -52,6 +52,14 @@ server-list-motd: <reset>                 <gold><bold>Fendoris</bold></gold><res
 server-list-ping-logs: true # Logs server list ping requests to console
 
 # ---------------------------------------------------------
+# Spawn Waypoint (ArmorStand marker at world spawn)
+# ---------------------------------------------------------
+
+spawn-waypoint:
+  enabled: true
+  color: gray
+
+# ---------------------------------------------------------
 # Welcome / Join / Quit
 # ---------------------------------------------------------
 
