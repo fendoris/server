@@ -11,7 +11,7 @@
 home:
   teleport-delay-seconds: 3
   teleport-already-in-progress-message: <red>You are already teleporting home!<reset>
-  cooldown-seconds: 5
+  cooldown-seconds: 33
   only-player-message: <red>Only players can use this command.<reset>
   usage-message: '<red>Usage: /home<reset>'
   cooldown-message: <red>You must wait %seconds%s before using this again.<reset>
@@ -21,6 +21,7 @@ home:
   teleport-about-to: <gray>Preparing to Teleport Home</gray>
   teleport-in-progress: <green>Teleported Home</green>
   teleport-success: <green>Teleported Home</green>
+  
 sethome:
   cooldown-seconds: 60
   only-player-message: <red>Only players can use this command.<reset>
