@@ -76,6 +76,7 @@ public-operator-quit-message: |-
 
   <gray>These are trusted members of our community who handle server management, maintenance and moderation.</gray>">%player%</hover></gold> <gray>disconnected</gray><reset>
 system:
+  prevent-crop-trample: true
   
   # ---------------------------------------------------------
   # PvP System
