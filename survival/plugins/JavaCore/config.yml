@@ -356,7 +356,7 @@ chat:
   
   cooldown:
     enabled: true
-    seconds: 3.0
+    seconds: 1.0
     message: <red>You must wait %seconds%s before chatting again.</red>
   
   mention-sound-enabled: true
