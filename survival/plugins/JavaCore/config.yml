@@ -21,7 +21,7 @@ home:
   teleport-about-to: <gray>Preparing to Teleport Home</gray>
   teleport-in-progress: <green>Teleported Home</green>
   teleport-success: <green>Teleported Home</green>
-  
+
 sethome:
   cooldown-seconds: 60
   only-player-message: <red>Only players can use this command.<reset>
