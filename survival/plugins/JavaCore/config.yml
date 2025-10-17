@@ -9,8 +9,17 @@
 # ---------------------------------------------------------
 
 home:
+  teleport-delay-start-message: <gray>Teleporting Home<reset>
+  teleport-cancelled-message: <red>Teleport Cancelled<reset>
+  teleport-particles-enabled: true
+  teleport-particle-name: minecraft:portal
+  teleport-particle-count: 20
+  teleport-sound-enabled: true
+  teleport-sound-name: minecraft:block.note_block.pling
+  teleport-sound-volume: 1.0
+  teleport-sound-pitch: 1.0
   teleport-delay-seconds: 3
-  teleport-already-in-progress-message: <red>You are already teleporting home!<reset>
+  teleport-already-in-progress-message: <gray>Teleporting Home<reset>
   cooldown-seconds: 33
   only-player-message: <red>Only players can use this command.<reset>
   usage-message: '<red>Usage: /home<reset>'
@@ -23,6 +32,7 @@ home:
   teleport-success: <green>Teleported Home</green>
 
 sethome:
+  disallowed-world-message: <red>You can't set your home in the Nether or the End.<reset>
   cooldown-seconds: 60
   only-player-message: <red>Only players can use this command.<reset>
   usage-message: '<red>Usage: /sethome<reset>'
