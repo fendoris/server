@@ -45,4 +45,6 @@ server.properties
 /plugins/fendoris-verify/verified.yml
 /plugins/fendoris-verify/applications.yml
 
+/plugins/JavaCore/storage.yml
+
 ###
