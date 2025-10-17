@@ -67,10 +67,7 @@ private-join-message-enabled: true
 public-join-message-enabled: true
 public-quit-message-enabled: true
 
-private-join-message: <newline><color:#38aa56>You successfully connect, %player%.
-  Have questions or concerns? Use <click:suggest_command:'/ineedhelp'><hover:show_text:'(Click)
-  /ineedhelp'>/ineedhelp</hover></click> or reach out on our <click:open_url:'https://fendoris.com/discord'><b><hover:show_text:'(Click)
-  fendoris.com/discord'>Discord</hover></b></click>.<newline>
+private-join-message: <newline><color:#42c765>You successfully connected!<newline>
 
 public-join-message: <gray>%player% connected</gray><reset>
 public-quit-message: <gray>%player% disconnected</gray><reset>
