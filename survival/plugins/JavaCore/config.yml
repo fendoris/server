@@ -67,8 +67,9 @@ server-list-ping-logs: true # Logs server list ping requests to console
 # ---------------------------------------------------------
 
 spawn-waypoint:
+  style: bowtie
   enabled: true
-  color: gray
+  color: FF9999
 
 # ---------------------------------------------------------
 # Welcome / Join / Quit
