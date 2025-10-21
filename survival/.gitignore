@@ -47,4 +47,9 @@ server.properties
 
 /plugins/JavaCore/storage.yml
 
+/plugins/BlueMap/maps
+/plugins/BlueMap/packs
+/plugins/BlueMap/storages
+
+/bluemap/
 ###
