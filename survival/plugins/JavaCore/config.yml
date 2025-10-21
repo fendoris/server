@@ -8,6 +8,13 @@
 # Reload / Administration
 # ---------------------------------------------------------
 
+map:
+  only-player-message: <red>Only players can use this command.</red>
+  message: '<newline><gold>See 3D renderings of this world at: <hover:show_text:''<gray>(Click)
+    Open Link</gray>''><click:open_url:''https://map.fendoris.com/''>map.fendoris.com</click></hover></gold><newline>'
+  cooldown-message: <red>You must wait %seconds%s before using this again.</red>
+  cooldown-message-less-than-1: <red>You must wait less than 1s to use /map again.</red>
+
 home:
   teleport-delay-start-message: <gray>Teleporting Home<reset>
   teleport-cancelled-message: <red>Teleport Cancelled<reset>
@@ -203,6 +210,7 @@ allowed-commands:
 - version
 - verify
 - apply
+- map
 
 # ---------------------------------------------------------
 # Spawn / SetSpawn / SendToSpawn
