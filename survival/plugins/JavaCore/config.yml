@@ -221,6 +221,7 @@ allowed-commands:
 - verify
 - apply
 - map
+- discord
 
 # ---------------------------------------------------------
 # Spawn / SetSpawn / SendToSpawn
