@@ -8,6 +8,13 @@
 # Reload / Administration
 # ---------------------------------------------------------
 
+discord:
+  only-player-message: <red>Only players can use this command.</red>
+  message: <newline><gold>Join our Discord at <hover:show_text:'<gray>(Click) Open
+    Link</gray>'><click:open_url:'https://fendoris.com/discord'>fendoris.com/discord</click></hover>.</gold><newline>
+  cooldown-message: <red>You must wait %seconds%s before using this again.</red>
+  cooldown-message-less-than-1: <red>You must wait less than 1s to use /discord again.</red>
+
 map:
   only-player-message: <red>Only players can use this command.</red>
   message: '<newline><gold>See 3D renderings of this world at: <hover:show_text:''<gray>(Click)
