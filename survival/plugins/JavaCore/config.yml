@@ -100,6 +100,9 @@ public-operator-quit-message: |-
 
   <gray>These are trusted members of our community who handle server management, maintenance and moderation.</gray>">%player%</hover></gold> <gray>disconnected</gray><reset>
 system:
+  # Extend full day-night cycle to ~60 minutes (vanilla is ~20).
+  # Applies to all worlds while enabled.
+  extended-day: true
   prevent-crop-trample: true
   
   # ---------------------------------------------------------
